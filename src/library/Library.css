@@ -8,13 +8,13 @@
 body {
   background-color: #bdb2ff;
   background-image: radial-gradient(
-    #ffadad,
-    #ffd6a5,
-    #fdffb6,
-    #caffbf,
-    #9bf6ff,
-    #bdb2ff,
-    #ffc6ff
+    #282828,
+    #414141,
+    #525252,
+    #666666,
+    #747474,
+    #828282,
+    #999999
   );
     min-height: 100vh;
     background-size: 500% 500%;

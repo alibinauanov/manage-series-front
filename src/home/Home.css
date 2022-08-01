@@ -6,15 +6,15 @@
 }
 
 body {
-  background-color: #bdb2ff;
+  background-color: #000000;
   background-image: radial-gradient(
-    #ffadad,
-    #ffd6a5,
-    #fdffb6,
-    #caffbf,
-    #9bf6ff,
-    #bdb2ff,
-    #ffc6ff
+    #282828,
+    #414141,
+    #525252,
+    #666666,
+    #747474,
+    #828282,
+    #999999
   );
     min-height: 100vh;
     background-size: 500% 500%;
@@ -117,7 +117,7 @@ header {
 }
 
 .text .manage {
-  color: #FF00B8;
+  color: #E6AF2E;
 }
 
 .text .your {
@@ -125,7 +125,7 @@ header {
 }
 
 .text .time {
-  color: #0500FF;
+  color: #343434;
 }
 
 .form {
@@ -190,11 +190,14 @@ header {
 
 .desc p{
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-family: Raleway;
   -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 1px;
-  font-weight: bolder;
+  /* -webkit-text-stroke-width: 0.7px; */
+  font-weight: 500;
+  position: relative;
+  bottom: 14vh;
+
 }
 
 
@@ -220,7 +223,7 @@ header {
   }
   
   .text .manage {
-    color: #FF00B8;
+    color: #E6AF2E;
   }
   
   .text .your {
@@ -228,7 +231,7 @@ header {
   }
   
   .text .time {
-    color: #0500FF;
+    color: #343434;
   }
   
   .form {
@@ -247,14 +250,6 @@ header {
   .form p {
     font-family: Raleway;
     font-size: 13px;
-  }
-  
-  .form select {
-    width: 180px;
-    height: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-family: Raleway;
   }
   
   .question {
@@ -283,18 +278,8 @@ header {
   .left_text {
     display: flex;
     flex-direction: column;
-    margin-top: 37%;
+    margin-top: 33%;
   }
-  
-  .desc p{
-    color: white;
-    font-size: 14px;
-    font-family: Raleway;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
-    font-weight: bolder;
-  }
-  
   
   .cont_result {
     background-color: grey;

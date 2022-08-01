@@ -9,7 +9,6 @@ import axios from 'axios';
 function Home() {
 
   const [hours, setHours] = useState();
-  const [minutes, setMinutes] = useState();
   const [period, setPeriod] = useState();
   const [category, setCategory] = useState();
 
@@ -19,9 +18,6 @@ function Home() {
     if (type === "hours") {
       setHours(e.target.value);
     } else
-      if (type === "minutes") {
-        setMinutes(e.target.value);
-      } else
         if (type === "period") {
           setPeriod(e.target.value);
         } else
@@ -31,8 +27,8 @@ function Home() {
   }
 
   const onSubmit = () => {
-    console.log(minutes,hours,period,category)
-    if(minutes && hours && period && category){
+    console.log(hours,period,category)
+    if(hours && period && category){
 
       axios.post('http://localhost:4000/', {
         minutes, hours, period, category
@@ -70,7 +66,7 @@ function Home() {
           </div>
 
           <div className='desc'>
-            <p>calculate how long it will<br />take to watch TV shows</p>
+            <p>calculate how long it will take to<br /> watch TV shows</p>
           </div>
         </div>
 
@@ -140,12 +136,21 @@ function Home() {
                 <optgroup label='Category' name="category">
                   <option selected="selected" disabled='disabled'></option>
                   <option>Action</option>
+                  <option>Action&Adventure</option>
                   <option>Adventure</option>
+                  <option>Animation</option>
+                  <option>Biography</option>
                   <option>Comedy</option>
+                  <option>Crime</option>
+                  <option>Documentary</option>
                   <option>Drama</option>
-                  <option>Slice of Life</option>
-                  <option>Fantasy</option>
-                  <option>Magic</option>
+                  <option>Family</option>
+                  <option>History</option>
+                  <option>Mystery</option>
+                  <option>Sci-Fi Fantasy</option>
+                  <option>Science Fiction</option>
+                  <option>Thriller</option>
+                  <option>War&Politics</option>
                 </optgroup>
               </select>
             </div>
