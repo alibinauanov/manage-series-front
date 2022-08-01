@@ -131,7 +131,7 @@ header {
 .form {
   background-color: white;
   width: 19%;
-  height: 50%;
+  height: 35%;
   padding: 20px;
   position: absolute;
   right: 20%;
@@ -156,7 +156,7 @@ header {
 
 .question {
   line-height: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* .choose {

@@ -47,8 +47,6 @@ function Home() {
   return (
     <div className="App">
 
-      <p className='language'>ru</p>
-
       <header>
 
         <Nav.Link href="/" className='logo'>
@@ -72,7 +70,7 @@ function Home() {
           </div>
 
           <div className='desc'>
-            <p>calculate how long it will<br />take to watch anime</p>
+            <p>calculate how long it will<br />take to watch TV shows</p>
           </div>
         </div>
 
@@ -107,30 +105,6 @@ function Home() {
                   <option>21 hours</option>
                   <option>22 hours</option>
                   <option>23 hours</option>
-                </optgroup>
-              </select>
-            </div>
-          </div>
-
-          <div className='question'>
-            <p>Minutes for watching per day</p>
-            <div className='choose'>
-              <select required onChange={(e) => onChange(e, "minutes")}>
-                <optgroup label='Minutes' name="minutes">
-                  <option selected="selected" disabled='disabled'></option>
-                  <option>0 minute</option>
-                  <option>5 minutes</option>
-                  <option>10 minutes</option>
-                  <option>15 minutes</option>
-                  <option>20 minutes</option>
-                  <option>25 minutes</option>
-                  <option>30 minutes</option>
-                  <option>35 minutes</option>
-                  <option>40 minutes</option>
-                  <option>45 minutes</option>
-                  <option>50 minutes</option>
-                  <option>55 minutes</option>
-                  <option>60 minutes</option>
                 </optgroup>
               </select>
             </div>
