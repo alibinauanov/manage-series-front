@@ -25,20 +25,18 @@ function Home() {
             setCategory(e.target.value);
           }
   }
+  var data = JSON.stringify({"hours": hours, "period": period, "category":category})
 
   const onSubmit = () => {
-    console.log(hours,period,category)
+    console.log(data)
     if(hours && period && category){
-
-      axios.post('http://localhost:4000/', {
-        minutes, hours, period, category
-      }).then((result) => {
+      axios.post('http://localhost:8080/post_name', data).then((result) => {
         console.log(result)
       }).catch((err)=>{
         console.log(err);
       })
     }
-  }
+  } 
 
   return (
     <div className="App">
@@ -46,7 +44,7 @@ function Home() {
       <header>
 
         <Nav.Link href="/" className='logo'>
-          <p>logo</p>
+          <p>wazoom</p>
         </Nav.Link>
 
         <Nav.Link href="library" className='library'>
@@ -78,29 +76,29 @@ function Home() {
               <select required onChange={(e) => onChange(e, "hours")}>
                 <optgroup label='Hours' name="hours">
                   <option selected="selected" disabled='disabled'></option>
-                  <option>1 hour</option>
-                  <option>2 hours</option>
-                  <option>3 hours</option>
-                  <option>4 hours</option>
-                  <option>5 hours</option>
-                  <option>6 hours</option>
-                  <option>7 hours</option>
-                  <option>8 hours</option>
-                  <option>9 hours</option>
-                  <option>10 hours</option>
-                  <option>11 hours</option>
-                  <option>12 hours</option>
-                  <option>13 hours</option>
-                  <option>14 hours</option>
-                  <option>15 hours</option>
-                  <option>16 hours</option>
-                  <option>17 hours</option>
-                  <option>18 hours</option>
-                  <option>19 hours</option>
-                  <option>20 hours</option>
-                  <option>21 hours</option>
-                  <option>22 hours</option>
-                  <option>23 hours</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
                 </optgroup>
               </select>
             </div>
@@ -167,5 +165,4 @@ function Home() {
     </div>
   );
 }
-
 export default Home;

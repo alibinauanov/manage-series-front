@@ -8,13 +8,13 @@
 body {
   background-color: #000000;
   background-image: radial-gradient(
-    #282828,
-    #414141,
-    #525252,
-    #666666,
-    #747474,
-    #828282,
-    #999999
+    #ffadad,
+    #ffd6a5,
+    #fdffb6,
+    #caffbf,
+    #9bf6ff,
+    #bdb2ff,
+    #ffc6ff
   );
     min-height: 100vh;
     background-size: 500% 500%;
@@ -57,8 +57,8 @@ header {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 30px;
   background-color: black;
   text-decoration: none;
@@ -117,7 +117,7 @@ header {
 }
 
 .text .manage {
-  color: #E6AF2E;
+  color: #FF00B8;
 }
 
 .text .your {
@@ -125,7 +125,7 @@ header {
 }
 
 .text .time {
-  color: #343434;
+  color: #0500FF;
 }
 
 .form {
@@ -190,14 +190,13 @@ header {
 
 .desc p{
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   font-family: Raleway;
   -webkit-text-stroke-color: black;
-  /* -webkit-text-stroke-width: 0.7px; */
-  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  font-weight: bold;
   position: relative;
   bottom: 14vh;
-
 }
 
 
@@ -223,7 +222,7 @@ header {
   }
   
   .text .manage {
-    color: #E6AF2E;
+    color: #FF00B8;
   }
   
   .text .your {
@@ -231,7 +230,7 @@ header {
   }
   
   .text .time {
-    color: #343434;
+    color: #0500FF;
   }
   
   .form {
