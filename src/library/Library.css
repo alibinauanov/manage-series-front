@@ -33,8 +33,10 @@ body {
 }
 
 .Library {
+  align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .language {
@@ -49,13 +51,13 @@ body {
   left: 87%;
 }
 
-header {
+.header {
   width: 60%;
   height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .logo {
@@ -103,11 +105,11 @@ header {
 }
 
 .tv_card {
-  display: table;
+  /* display: table; */
   width: 75%;
   height: 25%;
   border: 0;
-  margin-top: 200px;
+  margin-top: 30px;
 }
 
 .tv_box {
@@ -151,4 +153,23 @@ header {
 
 .tv_box:hover {
   box-shadow: 0 0 11px rgb(229, 255, 0); 
+}
+
+.filter {
+  display: flex;
+  height: 40px;
+  max-width: 60%;
+}
+
+.filter .btn {
+  margin-right: 5px;
+  border-radius: 5px;
+  width: 150px;
+  background: white;
+}
+
+.filter .btn:hover {
+  background: black;
+  color: white;
+  transition: .5s;
 }
