@@ -159,11 +159,11 @@ header {
   margin-bottom: 10px;
 }
 
-/* .choose {
-  line-height: 30px;
-} */
+.result_btn {
+  text-decoration: none;
+}
 
-.btn_submit {
+.result_btn p{
   width: 250px;
   height: 30px;
   background-color: black;
@@ -171,11 +171,15 @@ header {
   border-radius: 5px;
   font-family: Raleway;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  transition: .3s;
 }
 
-.btn_submit:hover {
+.result_btn p:hover {
   color: rgb(0, 255, 30);
-  border: 1px solid rgb(0, 255, 30);
+  /* border: 1px solid rgb(0, 255, 30); */
 }
 
 .in_line {
@@ -259,16 +263,6 @@ header {
   /* .choose {
     line-height: 30px;
   } */
-  
-  .btn_submit {
-    width: 180px;
-    height: 30px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    font-family: Raleway;
-    cursor: pointer;
-  }
   
   .in_line {
     display: inline-block;

@@ -2,42 +2,13 @@ import './Home.css';
 import { useState, useEffect } from 'react';
 import { Nav } from 'react-bootstrap';
 import { BsBook } from 'react-icons/bs';
-import { useDispatch } from 'react-redux'
 import axios from 'axios';
-
 
 function Home() {
 
-  const [hours, setHours] = useState();
-  const [period, setPeriod] = useState();
-  const [category, setCategory] = useState();
-
-
-  const onChange = (e, type) => {
-
-    if (type === "hours") {
-      setHours(e.target.value);
-    } else
-        if (type === "period") {
-          setPeriod(e.target.value);
-        } else
-          if (type === "category") {
-            setCategory(e.target.value);
-          }
-  }
-  var data = JSON.stringify({"hours": hours, "period": period, "category":category})
-
-  const onSubmit = () => {
-    console.log(data)
-    if(hours && period && category){
-      axios.post('http://localhost:8080/post_name', data).then((result) => {
-        console.log(result)
-      }).catch((err)=>{
-        console.log(err);
-      })
-    }
-  } 
-
+  const [period, setPeriod] = useState(0);
+  const [category, setCategory] = useState(0);
+  const [hours, setHours] = useState(0);
   return (
     <div className="App">
 
@@ -73,7 +44,7 @@ function Home() {
           <div className='question'>
             <p>Hours for watching per day</p>
             <div className='choose'>
-              <select required onChange={(e) => onChange(e, "hours")}>
+              <select required value={hours} onChange={(e) => setHours(e.target.value)}>
                 <optgroup label='Hours' name="hours">
                   <option selected="selected" disabled='disabled'></option>
                   <option>1</option>
@@ -107,21 +78,21 @@ function Home() {
           <div className='question'>
             <p>Period</p>
             <div className='choose'>
-              <select required onChange={(e) => onChange(e, "period")}>
+              <select required value={period} onChange={(e) => setPeriod(e.target.value)}>
                 <optgroup label='Period' name="period">
                   <option selected="selected" disabled='disabled'></option>
-                  <option>1 month</option>
-                  <option>2 months</option>
-                  <option>3 months</option>
-                  <option>4 months</option>
-                  <option>5 months</option>
-                  <option>6 months</option>
-                  <option>7 months</option>
-                  <option>8 months</option>
-                  <option>9 months</option>
-                  <option>10 months</option>
-                  <option>11 months</option>
-                  <option>1 year</option>
+                  <option value={1}>1 month</option>
+                  <option value={2}>2 months</option>
+                  <option value={3}>3 months</option>
+                  <option value={4}>4 months</option>
+                  <option value={5}>5 months</option>
+                  <option value={6}>6 months</option>
+                  <option value={7}>7 months</option>
+                  <option value={8}>8 months</option>
+                  <option value={9}>9 months</option>
+                  <option value={10}>10 months</option>
+                  <option value={11}>11 months</option>
+                  <option value={12}>1 year</option>
                 </optgroup>
               </select>
             </div>
@@ -130,7 +101,7 @@ function Home() {
           <div className='question'>
             <p>Category</p>
             <div className='choose'>
-              <select required onChange={(e) => onChange(e, "category")}>
+              <select required value={category} onChange={(e) => setCategory(e.target.value)}>
                 <optgroup label='Category' name="category">
                   <option selected="selected" disabled='disabled'></option>
                   <option>Action</option>
@@ -155,7 +126,10 @@ function Home() {
           </div>
 
           <div>
-            <button className='btn_submit' onClick={onSubmit}>Submit</button>
+            <Nav.Link href={`result?hours=${hours},period=${period},category=${category}`} className='result_btn'>
+              <p>Submit</p>
+            </Nav.Link>
+            {/* <button className='btn_submit' onClick={onSubmit}>Submit</button> */}
           </div>
 
         </div>
