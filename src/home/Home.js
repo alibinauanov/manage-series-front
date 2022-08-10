@@ -4,11 +4,78 @@ import { Nav } from 'react-bootstrap';
 import { BsBook } from 'react-icons/bs';
 import axios from 'axios';
 
+
+
+import action from '../library/json_data/action.json'
+import adventure from '../library/json_data/adventure.json'
+import biography from '../library/json_data/biography.json'
+import comedy from '../library/json_data/comedy.json'
+import crime from '../library/json_data/crime.json'
+import documentary from '../library/json_data/documentary.json'
+import drama from '../library/json_data/drama.json'
+import family from '../library/json_data/family.json'
+import history from '../library/json_data/history.json'
+import mystery from '../library/json_data/mystery.json'
+import science_fiction from '../library/json_data/science_fiction.json'
+import thriller from '../library/json_data/thriller.json'
+import war_politics from '../library/json_data/war_politics.json'
+
+
 function Home() {
+
+
+
+
+const filmsData = [{
+  type: "action",
+  data: action,
+}, {
+  type: "adventure",
+  data: adventure,
+}, {
+  type: "biography",
+  data: biography,
+}, {
+  type: "comedy",
+  data: comedy,
+}, {
+  type: "crime",
+  data: crime,
+}, {
+  type: "documentary",
+  data: documentary,
+}, {
+  type: "drama",
+  data: drama,
+}, {
+  type: "family",
+  data: family,
+}, {
+  type: "history",
+  data: history,
+}, {
+  type: "mystery",
+  data: mystery,
+}, {
+  type: "science_fiction",
+  data: science_fiction,
+}, {
+  type: "thriller",
+  data: thriller
+}, {
+  type: "war_politics",
+  data: war_politics
+}]
+
+
+
 
   const [period, setPeriod] = useState(0);
   const [category, setCategory] = useState(0);
   const [hours, setHours] = useState(0);
+  
+  const listItems = filmsData.map((d) => <option key={d.type}>{d.type}</option>)
+
   return (
     <div className="App">
 
@@ -46,8 +113,8 @@ function Home() {
             <div className='choose'>
               <select required value={hours} onChange={(e) => setHours(e.target.value)}>
                 <optgroup label='Hours' name="hours">
-                  <option selected="selected" disabled='disabled'></option>
-                  <option>1</option>
+                  {/* <option selected="selected"></option> */}
+                  <option selected="selected">1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
@@ -80,8 +147,8 @@ function Home() {
             <div className='choose'>
               <select required value={period} onChange={(e) => setPeriod(e.target.value)}>
                 <optgroup label='Period' name="period">
-                  <option selected="selected" disabled='disabled'></option>
-                  <option value={1}>1 month</option>
+                  {/* <option selected="selected"></option> */}
+                  <option selected="selected" value={1}>1 month</option>
                   <option value={2}>2 months</option>
                   <option value={3}>3 months</option>
                   <option value={4}>4 months</option>
@@ -103,9 +170,18 @@ function Home() {
             <div className='choose'>
               <select required value={category} onChange={(e) => setCategory(e.target.value)}>
                 <optgroup label='Category' name="category">
-                  <option selected="selected" disabled='disabled'></option>
-                  <option>Action</option>
-                  <option>Action&Adventure</option>
+                  {/* <option selected="selected" ></option> */}
+
+
+                {/* прости что испортил эту часть кода, но мне впадлу делать нормально
+                    короче, в filmsData сделай для каждого свой парам с названием
+                    и в <option > value чтобы норм передавалось ибо я сравниваю типы как строку
+                */}
+
+                  <option selected="selected">Action</option> 
+                  {listItems}
+
+                  {/* <option>Action&Adventure</option>
                   <option>Adventure</option>
                   <option>Animation</option>
                   <option>Biography</option>
@@ -119,7 +195,7 @@ function Home() {
                   <option>Sci-Fi Fantasy</option>
                   <option>Science Fiction</option>
                   <option>Thriller</option>
-                  <option>War&Politics</option>
+                  <option>War&Politics</option> */}
                 </optgroup>
               </select>
             </div>
