@@ -112,7 +112,6 @@ function Library() {
 
       <div className='tv_card'>
 
-        {/* Action */}
         {
           films.map((el) => el.data.map((film) => (
             <div className='tv_box' key={film.url}>

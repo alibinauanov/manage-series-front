@@ -39,18 +39,6 @@ body {
   flex-direction: column;
 }
 
-.language {
-  font-family: Raleway;
-  font-size: 19px;
-  font-weight: bolder;
-  color: white;
-  -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 1px;
-  position: absolute;
-  top: 12%;
-  left: 87%;
-}
-
 .header {
   width: 60%;
   height: 200px;
@@ -172,4 +160,19 @@ body {
   background: black;
   color: white;
   transition: .5s;
+}
+
+@media all and (max-width: 414px) {
+  .filter {
+    display: flex;
+    height: 20px;
+    max-width: 60%;
+  }
+  
+  .filter .btn {
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 150px;
+    background: white;
+  }
 }

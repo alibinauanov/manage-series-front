@@ -1,0 +1,143 @@
+.result {
+  display: flex;
+  justify-content: center;
+
+}
+
+.tv_card {
+  /* display: table; */
+  width: 75%;
+  height: 25%;
+  border: 0;
+  margin-top: 30px;
+}
+
+.tv_box {
+  width: 20%;
+  height: 430px;
+  background: white;
+  float: left;
+  margin-inline-start: 10%;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: box-shadow .3s;
+}
+
+.tv_box img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  border-bottom-style: solid;
+}
+
+.tv_box .info {
+  margin: 10px;
+  font-weight: 500;
+}
+
+.tv_box .info a {
+  text-decoration: none;
+}
+
+.tv_box .info a p {
+  margin-top: 15px;
+  color: white;
+  background: black;
+  width: 100px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.tv_box:hover {
+  box-shadow: 0 0 11px rgb(229, 255, 0); 
+}
+
+.restart {
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 70px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 130%;
+  left: 49%;
+}
+
+.restart p{
+  text-align: center;
+  margin-top: 5px;
+}
+
+@media all and (max-width: 414px) {
+  
+  .tv_box {
+    width: 20%;
+    height: 210px;
+    background: white;
+    float: left;
+    margin-inline-start: 10%;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow .3s;
+  }
+  
+  .tv_box img {
+    width: 100%;
+    height: 130px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-style: solid;
+  }
+  
+  .tv_box .info {
+    margin: 5px;
+    font-weight: 500;
+    font-size: 6px;
+  }
+  
+  .tv_box .info a {
+    text-decoration: none;
+  }
+  
+  .tv_box .info a p {
+    margin-top: 2px;
+    color: white;
+    background: black;
+    width: 40px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 5px;
+  }
+  
+  .tv_box:hover {
+    box-shadow: 0 0 11px rgb(229, 255, 0); 
+  }
+  
+  .restart {
+    text-decoration: none;
+    color: white;
+    background: black;
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    left: 49%;
+  }
+  
+  .restart p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
