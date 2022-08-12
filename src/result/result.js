@@ -133,11 +133,11 @@ const filmsData = [{
                 )
                 }
 
-                <Nav.Link href="/" className='restart'>
-                    <p>Restart</p>
-                </Nav.Link>
-
             </div>
+
+            <Nav.Link href="/" className='restart'>
+              <p>Restart</p>
+            </Nav.Link>
 
         </div>
     )
